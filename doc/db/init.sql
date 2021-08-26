@@ -2,16 +2,13 @@
 -- 幣別對應表 (CurrencyInfo)
 -------------------------
 CREATE TABLE demo.CurrencyInfo (
-	code varchar(10) NOT NULL COMMENT '幣別代碼',
-	name varchar(100) NOT NULL COMMENT '中文名稱',
-	creator varchar(100) NOT NULL COMMENT '創建人',
-	create_time DATETIME NOT NULL COMMENT '創建時間',
-	updator varchar(100) NULL COMMENT ' 修改者',
-	update_time DATETIME NULL COMMENT '修改時間',
-	enable BOOL NOT NULL COMMENT '是否啟用',
-	CONSTRAINT CurrencyInfo_pk PRIMARY KEY (code)
+	ID INT auto_increment NOT NULL COMMENT '流水號',
+	CODE varchar(10) NOT NULL COMMENT '幣別代碼',
+	NAME varchar(100) NOT NULL COMMENT '中文名稱',
+	CONSTRAINT CurrencyInfo_pk PRIMARY KEY (ID)
 )
 ENGINE=InnoDB
 DEFAULT CHARSET=utf8
 COLLATE=utf8_general_ci
-COMMENT='幣別對應表';
+COMMENT='幣別對應信息';
+
