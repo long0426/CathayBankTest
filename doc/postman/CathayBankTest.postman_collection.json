@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "717b7b40-618d-435a-90d7-26d240e7a1f1",
+		"name": "CathayBankTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all currency info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/currencyinfo/getall",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"currencyinfo",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get currency info by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/currencyinfo/get?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"currencyinfo",
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create currency info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "TEST",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "測試",
+							"type": "text"
+						},
+						{
+							"key": "creator",
+							"value": "SYS",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "updator",
+							"value": "SYS",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "enable",
+							"value": "true",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/currencyinfo/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"currencyinfo",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify currency by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "enable",
+							"value": "false",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "updator",
+							"value": "SYS1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "測試二",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/currencyinfo/modify",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"currencyinfo",
+						"modify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete currency by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/currencyinfo/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"currencyinfo",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show current currency price",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/coindesk/show",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"coindesk",
+						"show"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
